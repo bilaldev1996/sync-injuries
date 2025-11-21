@@ -20,7 +20,7 @@ jobs:
       - name: Configurar variables de entorno
         run: |
           echo "API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
-          echo "LARAVEL_ENDPOINT=${{ secrets.LARAVEL_ENDPOINT }}" >> $GITHUB_ENV
+          echo "LARAVEL_ENDPOINT=https://panel.intelibetia.com/sync-injuries" >> $GITHUB_ENV
 
       - name: Ejecutar sincronización
         run: php sync_script.php
