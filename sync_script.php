@@ -5,7 +5,8 @@ $API_KEY = '7992e9a30d847ca75d9db20c2f93b49b';
 $LARAVEL_ENDPOINT = 'https://panel.intelibetia.com/sync-injuries';
 
 // Ligas a sincronizar
-$leagues = [2, 140, 78, 61, 39, 135, 3];
+// $leagues = [2, 140, 78, 61, 39, 135, 3];
+$leagues = [2];
 $season = date('Y');
 
 /* ====================================================
