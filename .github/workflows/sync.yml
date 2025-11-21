@@ -1,0 +1,26 @@
+name: Sincronización de Datos de Fútbol Competiciones
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Se ejecuta todos los días a medianoche
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar el repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+
+      - name: Configurar variables de entorno
+        run: |
+          echo "API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
+          echo "LARAVEL_ENDPOINT=${{ secrets.LARAVEL_ENDPOINT }}" >> $GITHUB_ENV
+
+      - name: Ejecutar sincronización
+        run: php sync_script.php
