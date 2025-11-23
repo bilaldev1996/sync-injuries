@@ -5,8 +5,8 @@ $API_KEY = '7992e9a30d847ca75d9db20c2f93b49b';
 $LARAVEL_ENDPOINT = 'https://panel.intelibetia.com/sync-injuries';
 
 // Ligas a sincronizar
-// $leagues = [2, 140, 78, 61, 39, 135, 3];
-$leagues = [140];
+$leagues = [2,3,140, 78, 61, 39, 135];
+// $leagues = [140];
 $season = date('Y');
 
 /* ====================================================
@@ -118,6 +118,7 @@ try {
                 $injury['home_team_name'] = $fx['teams']['home']['name'];
                 $injury['away_team_id']   = $fx['teams']['away']['id'];
                 $injury['away_team_name'] = $fx['teams']['away']['name'];
+               
 
                 $allInjuries[] = $injury;
             }
