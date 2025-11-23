@@ -6,7 +6,7 @@ $LARAVEL_ENDPOINT = 'https://panel.intelibetia.com/sync-injuries';
 
 // Ligas a sincronizar
 // $leagues = [2, 140, 78, 61, 39, 135, 3];
-$leagues = [];
+$leagues = [140];
 $season = date('Y');
 
 /* ====================================================
