@@ -1,4 +1,4 @@
-name: Sincronización de Datos de Fútbol Competiciones
+name: Sincronización jugadores lesionados
 
 on:
   schedule:
