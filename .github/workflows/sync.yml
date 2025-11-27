@@ -2,7 +2,7 @@ name: Sincronización jugadores lesionados
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Se ejecuta todos los días a medianoche
+    - cron: '0 2 * * *'  # Se ejecuta todos los días a 02:00
   workflow_dispatch:
 
 jobs:
