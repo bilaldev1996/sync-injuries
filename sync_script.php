@@ -7,7 +7,7 @@ $LARAVEL_ENDPOINT = 'https://panel.intelibetia.com/sync-injuries';
 // Ligas a sincronizar
 $leagues = [2,3,140, 78, 61, 39, 135];
 // $leagues = [140];
-$season = date('Y');
+$season = date('Y') - 1;
 
 /* ====================================================
    FUNCIÓN GENERAL PARA LLAMAR API SPORTS
